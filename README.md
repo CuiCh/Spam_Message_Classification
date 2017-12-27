@@ -31,10 +31,10 @@
 
 ---
 
-![unsplash的图片](https://github.com/CuiCh/Spam_Message_Classification/blob/master/result.jpg)
+![模型结果对比](https://github.com/CuiCh/Spam_Message_Classification/blob/master/result.jpg)
 
 
-2017/12/22
+### 2017/12/22
 
 代码说明：
 
@@ -44,7 +44,7 @@
 
 - classifier.ipynb
 
-加载矩阵文件，训练模型，测试模型，输出结果
+完成不同模型下的结果对比
 
 注：直接加载矩阵文件，5W条短信会有3W多维度，出现Memory Error,尝试用PCA降维，情况有所缓解。
 
@@ -55,7 +55,12 @@
 从结果来看，结合F_score和precision,在不调整参数的情况下，SVM-linear和伯努利朴素贝叶斯的结果较好。
 
 
-2017/12/02 
+TODO：
+- 增量学习
+
+
+
+### 2017/12/02 
 
 从网络上下载某个停用词列表（data/allstopwords.txt,共1893个，包括数字，标点符号，常见中文词汇），
 去除停用词后分类精度反而下降，猜想有些停用词在标识垃圾短信方面还是有作用的，
@@ -71,7 +76,7 @@ TODO：
 
 
 
-2017/11/28 
+### 2017/11/28 
 
 基本流程跑通，使用SVM分类器进行试验
 
@@ -80,6 +85,3 @@ TODO：
 - 测试整体样本上的时间
 - 去除停用词和标点符号来减小向量空间
 - 调整SVM的参数观察对结果的影响
-
-
-
